@@ -1,0 +1,633 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Tour me</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="css/main.css" />
+	<link rel="stylesheet" type="text/css" href="css/update.css">
+
+	<style >
+
+		.item-content{
+			box-sizing: border-box;
+			padding: 10px;
+		}
+
+		.item-point{
+			display: block;
+			float: left;
+			margin-right: 10px;
+			margin-top : 5px;
+			border-radius: 100px;
+			background-color: yellow;
+			color: black;
+			width: 32px;
+			height: 32px;
+			font-size: 15px;
+			line-height: 32px;
+			text-align: center;
+		}
+		
+		.item-title , .item-description{
+			display: block;
+			text-overflow: ellipsis;
+			overflow: hidden;
+			white-space: nowrap;			
+		}
+
+		.item-title{
+			font-size: 14px;
+			padding-bottom: 3px;
+			font-weight: 700;
+		}
+
+		.item-description{
+			font-size: 12px;
+			/*color: #888;*/
+		}
+
+		.load-more-btn{
+			font-size: 15px;
+			font-weight: 700;
+			font-family: 'Times New Roman', Times, serif;
+			background-color: none;
+			border: 3px solid #192231;
+			border-radius: 10px;
+			padding: 5px;
+			color: #192231;
+		}
+
+		.load-more-btn:hover {
+			box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.25), 0 0 0.5em 0 #0B1A31;
+		}
+
+		.load-more-btn:active{
+			background-color: gray;
+		}
+		
+		.thumbnails-2, .thumbnails-3, .thumbnails-4 {
+			display: none;
+		}
+
+		.post-detail{
+			width: 60%;
+		}
+
+		.countdown li{
+			float: left;			
+		}
+
+		li {
+			list-style-type: none;
+		}
+
+		.event-title b{
+			font-size: 18px;
+		}
+
+		.event-description ul li {
+			font-size: 15px;
+		}
+
+		.event-description ul {
+			margin-bottom: 5px;
+			padding-left: 0;
+		}
+
+	</style>
+
+</head>
+<body>
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+
+
+		<!-- Header -->
+		<header id="header">
+			<span class="avatar"><img src="images/avatar.jpg" alt="" /></span>
+				<h1>We help you to have more information about Tourist destinations</h1>
+				<h1>We find good ways for you to have most conveniences and best experiences</h1>				
+			</header>
+
+		<div class="grid">
+
+    		<form action="#" method="get" class="search">
+
+      			<div class="form__field">
+        			<input type="search" name="search" placeholder="What are you looking for?" class="form__input" >
+        			<button class="search-btn"><i class="fa fa-search" style="color: white"></i></button>
+      			</div>
+
+    		</form>
+
+  		</div>
+
+			<!-- Tab -->
+			<div class='tabbed round'>
+				<ul>
+					<li class="tab-4" value="4">Event</li>
+					<li class="tab-3" value="3">New</li>
+					<li class="tab-2" value="2">Hot</li>
+					<li class='tab-1 active' value="1">Popular</li>
+				</ul>
+				
+			</div>
+			<!-- Tab -->
+
+
+			<!-- Main -->
+			<section id="main">
+
+				<!-- Popular -->
+				<!-- Thumbnails -->
+				<section class="thumbnails thumbnails-1">
+
+					<!-- Col1 -->
+					<div>
+						<a href="">
+							<img src="images/thumbs/01.jpg" alt="" style="margin-bottom: 5px" />
+							<div class="item-content">
+								<div class="item-point">
+									<span >4.0</span>
+								</div>
+								<div class="item-title"><b>Cowboy's Place Coffee  Tea House - Bình Phú</b>
+								</div>
+								<div class="item-description">25A Bình Phú, P. 10, Quận 6, TP. HCM
+								</div>
+							</div>
+						</a>
+						<a href="">
+							<img src="images/thumbs/02.jpg" alt="" style="margin-bottom: 5px" />
+							<div class="item-content">
+								<div class="item-point">
+									<span >4.0</span>
+								</div>
+								<div class="item-title"><b>Equatorial Ho Chi Minh City</b>
+								</div>
+								<div class="item-description">242, Trần Bình Trọng , Quận 5, TP. Hồ Chí Minh, Việt Nam
+								</div>
+							</div>
+						</a>										
+					</div>
+					<!-- Col1 -->
+
+					<!-- Col2 -->
+					<div>
+						<a href="">
+							<img src="images/thumbs/03.jpg" alt="" style="margin-bottom: 5px" />
+							<div class="item-content">
+								<div class="item-point">
+									<span >3.6</span>
+								</div>
+								<div class="item-title"><b>CI5 Coffee & Tea House</b>
+								</div>
+								<div class="item-description">243 Lê Văn Sỹ, P. 13, Quận 3, TP. HCM
+								</div>
+							</div>
+						</a>
+						<a href="">
+							<img src="images/thumbs/04.jpg" alt="" style="margin-bottom: 5px" />
+							<div class="item-content">
+								<div class="item-point">
+									<span >5.0</span>
+								</div>
+								<div class="item-title"><b>Caztus Coffee - Nguyễn Thị Minh Khai</b>
+								</div>
+								<div class="item-description">153/11A Nguyễn Thị Minh Khai, P. Phạm Ngũ Lão, Quận 1, TP. HCM
+								</div>
+							</div>
+						</a>
+					</div>
+					<!-- Col2 -->
+
+					<!-- Col3 -->
+					<div>
+						<a href="">
+							<img src="images/thumbs/05.jpg" alt="" style="margin-bottom: 5px" />
+							<div class="item-content">
+								<div class="item-point">
+									<span >4.0</span>
+								</div>
+								<div class="item-title"><b>Ben Thanh Boutique</b>
+								</div>
+								<div class="item-description">55/34 LE THI HONG GAM, TP. Hồ Chí Minh, Việt Nam
+								</div>
+							</div>
+						</a>
+						<a href="">
+							<img src="images/thumbs/06.jpg" alt="" style="margin-bottom: 5px" />
+							<div class="item-content">
+								<div class="item-point">
+									<span >4.0</span>
+								</div>
+								<div class="item-title"><b>Saigon Phu Quoc Resort</b>
+								</div>
+								<div class="item-description">62 Tran Hung Dao St., Phu Quoc Island,Vietnam, -, TP. Hồ Chí Minh, Việt Nam
+								</div>
+							</div>
+						</a>
+					</div>
+					<!-- Col3 -->
+
+				</section>
+				<!-- Thumbnails -->
+				<!-- Popular -->
+
+				<!-- Hot -->
+				<!-- Thumbnails -->
+				<section class="thumbnails thumbnails-2">
+
+					<!-- Col1 -->
+					<div>
+						<a href="">
+							<img src="images/thumbs/05.jpg" alt="" style="margin-bottom: 5px" />
+							<div class="item-content">
+								<div class="item-point">
+									<span >4.0</span>
+								</div>
+								<div class="item-title"><b>Cowboy's Place Coffee  Tea House - Bình Phú</b>
+								</div>
+								<div class="item-description">25A Bình Phú, P. 10, Quận 6, TP. HCM
+								</div>
+							</div>
+						</a>
+						<a href="">
+							<img src="images/thumbs/02.jpg" alt="" style="margin-bottom: 5px" />
+							<div class="item-content">
+								<div class="item-point">
+									<span >4.0</span>
+								</div>
+								<div class="item-title"><b>Equatorial Ho Chi Minh City</b>
+								</div>
+								<div class="item-description">242, Trần Bình Trọng , Quận 5, TP. Hồ Chí Minh, Việt Nam
+								</div>
+							</div>
+						</a>										
+					</div>
+					<!-- Col1 -->
+
+					<!-- Col2 -->
+					<div>
+						<a href="">
+							<img src="images/thumbs/04.jpg" alt="" style="margin-bottom: 5px" />
+							<div class="item-content">
+								<div class="item-point">
+									<span >3.6</span>
+								</div>
+								<div class="item-title"><b>CI5 Coffee & Tea House</b>
+								</div>
+								<div class="item-description">243 Lê Văn Sỹ, P. 13, Quận 3, TP. HCM
+								</div>
+							</div>
+						</a>
+						<a href="">
+							<img src="images/thumbs/03	.jpg" alt="" style="margin-bottom: 5px" />
+							<div class="item-content">
+								<div class="item-point">
+									<span >5.0</span>
+								</div>
+								<div class="item-title"><b>Caztus Coffee - Nguyễn Thị Minh Khai</b>
+								</div>
+								<div class="item-description">153/11A Nguyễn Thị Minh Khai, P. Phạm Ngũ Lão, Quận 1, TP. HCM
+								</div>
+							</div>
+						</a>
+					</div>
+					<!-- Col2 -->
+
+					<!-- Col3 -->
+					<div>
+						<a href="">
+							<img src="images/thumbs/05.jpg" alt="" style="margin-bottom: 5px" />
+							<div class="item-content">
+								<div class="item-point">
+									<span >4.0</span>
+								</div>
+								<div class="item-title"><b>Ben Thanh Boutique</b>
+								</div>
+								<div class="item-description">55/34 LE THI HONG GAM, TP. Hồ Chí Minh, Việt Nam
+								</div>
+							</div>
+						</a>
+						<a href="">
+							<img src="images/thumbs/06.jpg" alt="" style="margin-bottom: 5px" />
+							<div class="item-content">
+								<div class="item-point">
+									<span >4.0</span>
+								</div>
+								<div class="item-title"><b>Saigon Phu Quoc Resort</b>
+								</div>
+								<div class="item-description">62 Tran Hung Dao St., Phu Quoc Island,Vietnam, -, TP. Hồ Chí Minh, Việt Nam
+								</div>
+							</div>
+						</a>
+					</div>
+					<!-- Col3 -->
+
+				</section>
+				<!-- Thumbnails -->
+				<!-- Hot -->
+
+				<!-- New -->
+				<!-- Thumbnails -->
+				<section class="thumbnails thumbnails-3">
+
+					<!-- Col1 -->
+					<div>
+						<a href="">
+							<img src="images/thumbs/05.jpg" alt="" style="margin-bottom: 5px" />
+							<div class="item-content">
+								<div class="item-point">
+									<span >4.0</span>
+								</div>
+								<div class="item-title"><b>Cowboy's Place Coffee  Tea House - Bình Phú</b>
+								</div>
+								<div class="item-description">25A Bình Phú, P. 10, Quận 6, TP. HCM
+								</div>
+							</div>
+						</a>
+						<a href="">
+							<img src="images/thumbs/02.jpg" alt="" style="margin-bottom: 5px" />
+							<div class="item-content">
+								<div class="item-point">
+									<span >4.0</span>
+								</div>
+								<div class="item-title"><b>Equatorial Ho Chi Minh City</b>
+								</div>
+								<div class="item-description">242, Trần Bình Trọng , Quận 5, TP. Hồ Chí Minh, Việt Nam
+								</div>
+							</div>
+						</a>										
+					</div>
+					<!-- Col1 -->
+
+					<!-- Col2 -->
+					<div>
+						<a href="">
+							<img src="images/thumbs/04.jpg" alt="" style="margin-bottom: 5px" />
+							<div class="item-content">
+								<div class="item-point">
+									<span >3.6</span>
+								</div>
+								<div class="item-title"><b>CI5 Coffee & Tea House</b>
+								</div>
+								<div class="item-description">243 Lê Văn Sỹ, P. 13, Quận 3, TP. HCM
+								</div>
+							</div>
+						</a>
+						<a href="">
+							<img src="images/thumbs/03	.jpg" alt="" style="margin-bottom: 5px" />
+							<div class="item-content">
+								<div class="item-point">
+									<span >5.0</span>
+								</div>
+								<div class="item-title"><b>Caztus Coffee - Nguyễn Thị Minh Khai</b>
+								</div>
+								<div class="item-description">153/11A Nguyễn Thị Minh Khai, P. Phạm Ngũ Lão, Quận 1, TP. HCM
+								</div>
+							</div>
+						</a>
+					</div>
+					<!-- Col2 -->
+
+					<!-- Col3 -->
+					<div>
+						<a href="">
+							<img src="images/thumbs/05.jpg" alt="" style="margin-bottom: 5px" />
+							<div class="item-content">
+								<div class="item-point">
+									<span >4.0</span>
+								</div>
+								<div class="item-title"><b>Ben Thanh Boutique</b>
+								</div>
+								<div class="item-description">55/34 LE THI HONG GAM, TP. Hồ Chí Minh, Việt Nam
+								</div>
+							</div>
+						</a>
+						<a href="">
+							<img src="images/thumbs/06.jpg" alt="" style="margin-bottom: 5px" />
+							<div class="item-content">
+								<div class="item-point">
+									<span >4.0</span>
+								</div>
+								<div class="item-title"><b>Saigon Phu Quoc Resort</b>
+								</div>
+								<div class="item-description">62 Tran Hung Dao St., Phu Quoc Island,Vietnam, -, TP. Hồ Chí Minh, Việt Nam
+								</div>
+							</div>
+						</a>
+					</div>
+					<!-- Col3 -->
+
+				</section>
+				<!-- Thumbnails -->
+				<!-- New -->
+
+				<!-- Event -->
+				<!-- Thumbnails -->
+				<section class="thumbnails thumbnails-4">
+
+					<!-- CoL 1-->
+					<div>
+						<a href="">
+							<!-- Post Img -->
+							<img src="images/thumbs/01.jpg" alt="img-01">
+							<!-- <div class="post-img">
+								
+							</div> -->
+							<!-- Post Img -->
+
+							<!-- Post Detail -->
+							<div class="item-content">
+								<div class="event-title"><b>Event Title Name</b>
+								</div>
+								<div class="event-description">
+									<ul>
+									<li><i class="fa fa-map-marker"></i>  King Street, Melbourne VIC 3000</li>
+									<li><i class="fa fa-clock-o"></i>  10:30 am To 8:00 pm</li>
+									</ul>
+								</div>
+							</div>							
+						</a>	
+						<a href="">
+							<!-- Post Img -->
+							<img src="images/thumbs/01.jpg" alt="img-01">
+							<!-- <div class="post-img">
+								
+							</div> -->
+							<!-- Post Img -->
+
+							<!-- Post Detail -->
+							<div class="item-content">
+								<div class="event-title"><b>Event Title Name</b>
+								</div>
+								<div class="event-description">
+									<ul>
+									<li><i class="fa fa-map-marker"></i>  King Street, Melbourne VIC 3000</li>
+									<li><i class="fa fa-clock-o"></i>  10:30 am To 8:00 pm</li>
+									</ul>
+								</div>
+							</div>							
+						</a>								
+					</div>
+					<!-- Col 1 -->
+
+					<!-- CoL 2-->
+					<div>
+						<a href="">
+							<!-- Post Img -->
+							<img src="images/thumbs/01.jpg" alt="img-01">
+							<!-- <div class="post-img">
+								
+							</div> -->
+							<!-- Post Img -->
+
+							<!-- Post Detail -->
+							<div class="item-content">
+								<div class="event-title"><b>Event Title Name</b>
+								</div>
+								<div class="event-description">
+									<ul>
+									<li><i class="fa fa-map-marker"></i>  King Street, Melbourne VIC 3000</li>
+									<li><i class="fa fa-clock-o"></i>  10:30 am To 8:00 pm</li>
+									</ul>
+								</div>
+							</div>							
+						</a>	
+						<a href="">
+							<!-- Post Img -->
+							<img src="images/thumbs/01.jpg" alt="img-01">
+							<!-- <div class="post-img">
+								
+							</div> -->
+							<!-- Post Img -->
+
+							<!-- Post Detail -->
+							<div class="item-content">
+								<div class="event-title"><b>Event Title Name</b>
+								</div>
+								<div class="event-description">
+									<ul>
+									<li><i class="fa fa-map-marker"></i>  King Street, Melbourne VIC 3000</li>
+									<li><i class="fa fa-clock-o"></i>  10:30 am To 8:00 pm</li>
+									</ul>
+								</div>
+							</div>							
+						</a>								
+					</div>
+					<!-- Col 2 -->
+
+					<!-- CoL 3-->
+					<div>
+						<a href="">
+							<!-- Post Img -->
+							<img src="images/thumbs/01.jpg" alt="img-01">
+							<!-- <div class="post-img">
+								
+							</div> -->
+							<!-- Post Img -->
+
+							<!-- Post Detail -->
+							<div class="item-content">
+								<div class="event-title"><b>Event Title Name</b>
+								</div>
+								<div class="event-description">
+									<ul>
+									<li><i class="fa fa-map-marker"></i>  King Street, Melbourne VIC 3000</li>
+									<li><i class="fa fa-clock-o"></i>  10:30 am To 8:00 pm</li>
+									</ul>
+								</div>
+							</div>							
+						</a>	
+						<a href="">
+							<!-- Post Img -->
+							<img src="images/thumbs/01.jpg" alt="img-01">
+							<!-- <div class="post-img">
+								
+							</div> -->
+							<!-- Post Img -->
+
+							<!-- Post Detail -->
+							<div class="item-content">
+								<div class="event-title"><b>Event Title Name</b>
+								</div>
+								<div class="event-description">
+									<ul>
+									<li><i class="fa fa-map-marker"></i>  King Street, Melbourne VIC 3000</li>
+									<li><i class="fa fa-clock-o"></i>  10:30 am To 8:00 pm</li>
+									</ul>
+								</div>
+							</div>							
+						</a>								
+					</div>
+					<!-- Col 3 -->
+
+				</section>
+				<!-- Thumbnails -->
+				<!-- Event -->
+
+				<div class="load-more" style="text-align: center " >
+					<a class="load-more-btn" >LOAD MORE</a>
+				</div>
+
+			</section>
+
+			<!-- Footer -->
+			<footer id="footer">
+				<ul class="icons">
+					<li><a href="#" class="icon style2 fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="#" class="icon style2 fa-facebook"><span class="label">Facebook</span></a></li>
+					<li><a href="#" class="icon style2 fa-instagram"><span class="label">Instagram</span></a></li>
+					<li><a href="#" class="icon style2 fa-envelope-o"><span class="label">Email</span></a></li>
+				</ul>
+				<p>&copy; Untitled. All rights reserved. Design: <a href="http://templated.co">TEMPLATED</a>. Demo Images: <a href="http://unsplash.com">Unsplash</a>.</p>
+			</footer>
+
+		</div>
+
+		<!-- Scripts -->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.poptrox.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/main.js"></script>
+		<script src="js/index.js"></script>
+		<script type="text/javascript">
+        function searchToggle(obj, evt){
+            var container = $(obj).closest('.search-wrapper');
+
+            if(!container.hasClass('active')){
+                  container.addClass('active');
+                  evt.preventDefault();
+            }
+            else if(container.hasClass('active') && $(obj).closest('.input-holder').length == 0){
+                  container.removeClass('active');
+                  // clear input
+                  container.find('.search-input').val('');
+                  // clear and hide result container when we press close
+                  container.find('.result-container').fadeOut(100, function(){$(this).empty();});
+            }
+        }
+
+        function submitFn(obj, evt){
+            value = $(obj).find('.search-input').val().trim();
+
+            _html = "Yup yup! Your search text sounds like this: ";
+            if(!value.length){
+                _html = "Yup yup! Add some text friend :D";
+            }
+            else{
+                _html += "<b>" + value + "</b>";
+            }
+
+            $(obj).find('.result-container').html('<span>' + _html + '</span>');
+            $(obj).find('.result-container').fadeIn(100);
+
+            evt.preventDefault();
+        }
+        </script>
+
+	</body>
+	</html>
